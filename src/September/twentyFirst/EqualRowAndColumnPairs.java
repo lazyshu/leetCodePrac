@@ -1,6 +1,5 @@
-package September.TwentyFirst;
+package September.twentyFirst;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class EqualRowAndColumnPairs {

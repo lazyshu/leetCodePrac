@@ -1,4 +1,4 @@
-package September.Twenty_Sliding_Window;
+package September.twentySlidingWindow;
 
 public class Max_Consecutive_ones_easy {
     public static void main(String[] args) {

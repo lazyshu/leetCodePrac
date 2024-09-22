@@ -1,4 +1,4 @@
-package September.Twenty_Sliding_Window;
+package September.twentySlidingWindow;
 
 public class Longer_contiguous_segments_of_ones_than_zeros_easy {
 //    https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros/description/

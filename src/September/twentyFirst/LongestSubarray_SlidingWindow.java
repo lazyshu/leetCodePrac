@@ -1,4 +1,4 @@
-package September.TwentyFirst;
+package September.twentyFirst;
 
 public class LongestSubarray_SlidingWindow {
 //    https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/?envType=study-plan-v2&envId=leetcode-75
