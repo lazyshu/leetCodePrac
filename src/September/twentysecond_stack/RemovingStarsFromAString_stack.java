@@ -5,6 +5,8 @@ import java.util.Stack;
 
 public class RemovingStarsFromAString_stack {
     public static void main(String[] args) {
+//        https://leetcode.com/problems/removing-stars-from-a-string/description/?envType=study-plan-v2&envId=leetcode-75
+
         //이건 릿코드에 있던 방식! 8ms :(
         String s = "leet**cod*e";
         int len = s.length();
