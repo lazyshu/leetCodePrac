@@ -8,46 +8,35 @@ public class DecodeString394_stack {
 //        String s = "2[abc]3[cd]ef";
 
 //        Output: "abcabccdcdcdef"
-        Stack<String> result = new Stack<>();
-        Stack<Integer> counts = new Stack<>();
-        String res = "";
-        int index=0;
-        while (index < s.length()) {
-            //when it is a number
-            char c = s.charAt(index);
-            if (Character.isDigit(c)){
-                int co=0;
-                while (Character.isDigit(s.charAt(index))) {
-                    co = co * 10 + s.charAt(index)-'0';
-                    index++;
+        Stack<Character> result = new Stack<>();
+        String newString = "";
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i)==']'){
+                i++;
+                StringBuilder st = new StringBuilder();
+                while (i<s.length()&&s.charAt(i) != '[') {
+                    st.append(result.pop());
+                    i++;
                 }
-                counts.push(co); //3,2,
-            } else if (c == '[') {
-                if (!res.equals("")) {
-                    result.push(res); //"","a",
-                    res = "";
-                }
+                int count=0;
+               i++;
+                System.out.println("s = " + s.charAt(i));
+                while (i<s.length()&&Character.isDigit(s.charAt(i))) {
 
-                index++;
+                    count = count * 10 + s.charAt(i);
 
-            } else if (c == ']') {
-                StringBuilder temp = new StringBuilder();
-                int count = counts.pop(); //2 //3
-                res = result.pop()+res;
-                for (int i = 0; i < count; i++) {
-                    temp.append(res);  //cc
+                    i++;
                 }
-                res = temp.toString(); //res="cc"
-                index++;
-            } else {
-                while (!Character.isDigit(s.charAt(index))&&s.charAt(index)!= '['&&s.charAt(index) != ']') {
-                    res += c;
-                    index++;
+                String torepeat = st.toString();
+                for (int j = 0; j < count; j++) {
+                    st.append(torepeat);
                 }
-                result.push(res);
-                res = "";
+                newString = st.toString();
+
+            }else {
+                result.add(s.charAt(i));
             }
         }
-        System.out.println("res = " + res);
+        System.out.println(newString);
     }
 }
