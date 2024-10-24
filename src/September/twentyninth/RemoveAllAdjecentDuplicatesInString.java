@@ -9,7 +9,25 @@ public class RemoveAllAdjecentDuplicatesInString {
     public static void main(String[] args) {
         String s = "azxxzy"; //2,3->1,2
 
-        //34ms :(
+
+        //6ms
+//        int resIndex=0;
+//        char[] res = new char[s.length()];
+//        //char[]배열의 익덱스랑 s의 인덱스를 따로 두고
+//        //리턴할때 char[]배열에 있는 답만 resIndex사용해서 쏙 뺴주기!!
+//
+//        for (int i = 0; i < s.length(); i++) {
+//            res[resIndex] = s.charAt(i);
+//            if (resIndex > 0 && res[resIndex] == res[resIndex - 1]) {
+//                resIndex--;
+//                System.out.println("resIndex = " + resIndex);
+//            } else {
+//                resIndex++;
+//            }
+//        }
+//        System.out.println("res = " + String.valueOf(res, 0, resIndex));
+
+//        //32ms :(
         Stack<Character> st = new Stack<>();
         st.add(s.charAt(0));
         int length = s.length();
